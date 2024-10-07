@@ -34,10 +34,17 @@ if not st.session_state.age_verified:
         webbrowser.open("https://www.google.com")
     st.stop()
 
+
 # Sidebar with page navigation
 st.sidebar.title("Navigation")
-st.sidebar.write("Select a page:")
-page = st.sidebar.radio("Go to", ("Home", "Gallery", "More Links"))
+if st.sidebar.button("Home"):
+    page = "Home"
+elif st.sidebar.button("Gallery"):
+    page = "Gallery"
+elif st.sidebar.button("More Links"):
+    page = "More Links"
+else:
+    page = "Home"
 
 # Define Home Page
 if page == "Home":

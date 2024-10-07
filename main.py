@@ -1,4 +1,5 @@
 import streamlit as st
+import webbrowser
 
 # Set Streamlit page configuration
 st.set_page_config(
